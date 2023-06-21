@@ -20,7 +20,7 @@ machine_paced:
     not_there: 0  # ?
     not_there_disabled: true  # ?
 
-    minimum_response_time: 500  # Theoretical minimum response time
+    minimum_response_time: 600  # Theoretical minimum response time
 
     rolling_average:
         mean_size: 8  # Take the correct answers of the last `mean_size` rounds
