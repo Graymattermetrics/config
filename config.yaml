@@ -24,7 +24,7 @@ machine_paced:
 
     rolling_average:
         mean_size: 8  # Take the correct answers of the last `mean_size` rounds
-        threshold: 0.6  # Percentage of correct answers before speeding up / slowing down
+        threshold: 0.7  # Percentage of correct answers before speeding up / slowing down
 
         max_wrong_count: 5  # Number of wrong answers before the test ends
 
