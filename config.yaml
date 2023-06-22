@@ -59,7 +59,7 @@ tutorial:  # ?
 timeouts:
     max_initial_no_response: 10_000  # Initial starting time before the test ends if no response is given
     max_no_response: 5000  # Time before the test ends if no response is given
-    max_test_duration: 120_000  # Maximum time in milliseconds before the test ends
+    max_test_duration: 150_000  # Maximum time in milliseconds before the test ends
     
 cpi_calculation:
     cpi_min: 0  # Lower bound
