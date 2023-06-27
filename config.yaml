@@ -79,3 +79,5 @@ bpRoundCount: 3  # ?
 n_inversecolordisplay: 3  # ?
 p_displayother: 0.25  # ?
 p_invert_letnum: 0.25  # ?
+
+control: True  # A control variable that will always be true
