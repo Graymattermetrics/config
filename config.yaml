@@ -18,7 +18,7 @@ self_paced:
 
 machine_paced:
     max_count: 8  # ?
-    max_start_duration: 2100  # Maximum initital `duration` (ignoring `self_paced_average`)
+    max_start_duration: 2400  # Maximum initital `duration` (ignoring `self_paced_average`)
     not_there: 0  # ?
     not_there_disabled: true  # ?
 
