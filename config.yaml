@@ -18,7 +18,7 @@ self_paced:
 
 machine_paced:
     max_count: 8  # ?
-    max_start_duration: 2100  # Maximum initital `duration` (ignoring `self_paced_average`)
+    max_start_duration: 2400  # Maximum initital `duration` (ignoring `self_paced_average`)
     not_there: 0  # ?
     not_there_disabled: true  # ?
 
@@ -33,13 +33,15 @@ machine_paced:
     blocking:
         no_input_count: 2  # How many rounds with no response to declare a "block"
 
-        slow_down_duration: 275  # After blocking, resume with `machine_pace` + this amount
+        slow_down_duration: 375  # After blocking, resume with `machine_pace` + this amount
         duration_delta: 135  # For the test to end, two blocks must occur within this range
 
         min_correct_answers: 2  # Number of correct answers in a row needed to continue with MP
         max_wrong_answers: 3  # Number of total wrong answers before the test ends
 
         no_response_duration: 6000  # No response time before the test ends
+
+        max_block_count: 6  # Maximum number of blocks allowed before the test fails
 
     # The test slows down when the user gets less than `rolling_average.threshold` correct answers 
     slowdown:
@@ -51,7 +53,7 @@ machine_paced:
         speedup_with_ratio_amount: 200  # Amount to speed up by * (ratio - 1.0)
 
 anti_spoofing:
-    max_bad_tests_in_session: 3  # Number of bad tests because retest is no longer an option
+    max_bad_tests_in_session: 6 # Number of bad tests because retest is no longer an option
 
 tutorial:  # ?
     tutorial_nSPRounds: 12
