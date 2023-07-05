@@ -9,13 +9,13 @@ def lambda_handler(event, context):
     which is a git commit sha. If no version is provided, the latest commit from main
     is used.
     """
-    version = event['queryStringParameters'].get('version', None)
+    version = (event['queryStringParameters'] or {}).get('version', None)
     if version is None:
         request = requests.get("https://api.github.com/repos/graymattermetrics/config/branches/main")
         version = request.json()['commit']['sha']
 
-    content = requests.get(f"https://raw.githubusercontent.com/graymattermetrics/config/{version}/config.yaml")
-    config = yaml.safe_load(content)
+    request = requests.get(f"https://raw.githubusercontent.com/graymattermetrics/config/{version}/config.yaml")
+    config = yaml.safe_load(request.content)
     config['version'] = version
 
     return {
