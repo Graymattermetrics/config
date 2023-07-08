@@ -65,4 +65,4 @@ save_round_data: true  # Or to automatically send it to another user
 
 number_of_endmode_rounds: 2  # Number of extra rounds at the end of the test
 
-control: True  # A control variable that will always be true
+error: False  # An error variable that is set to True if there is a version error
