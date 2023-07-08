@@ -41,7 +41,8 @@ def lambda_handler(event, context):
     config = yaml.safe_load(request.content)
     config['version'] = version
 
-    if count_keys(config) < count_keys(get_main_keys()):
+    # Minus one because its the 'version' key
+    if count_keys(config) - 1 < count_keys(get_main_keys()):
         reason = (
             "Error: the number of keys in the config is less than "
             "the number of keys in the main branch"
@@ -57,3 +58,8 @@ def lambda_handler(event, context):
             'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
         },
     }
+
+if __name__ == "__main__":
+    print(lambda_handler({
+        "queryStringParameters": {"branch": "test-broken-version"}
+    },{}))
