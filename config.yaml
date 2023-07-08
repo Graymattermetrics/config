@@ -12,7 +12,7 @@ self_paced:
     no_response_duration: 6000  # No response time before the test ends
     number_of_training_rounds: 1  # Number of rounds at the start to get the user used to the test
     max_wrong_count: 5  # Number of wrong answers before the test ends
-    max_right_count: 4  # Number of right answers before self-paced test ends
+    max_right_count: 4  # Number of right answers *in a row* before machine paced starts
     total_correct_count: 12  # Number of correct answers under `max_correct_duration` to end the test
     max_correct_duration: 3000  # Answers under this time are counted
 
