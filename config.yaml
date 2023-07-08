@@ -51,7 +51,7 @@ machine_paced:
     # The test speeds up when the user gets more than `rolling_average.threshold` correct answers
     speedup:
         speedup_with_ratio_amount: 150  # Amount to speed up by * (ratio - `machine_paced.speedup.weighting`)
-        weighting: 1.0  # Weighting of the ratio in the speedup calculation
+        weighting: 1.25  # Weighting of the ratio in the speedup calculation
 
 anti_spoofing:
     max_bad_tests_in_session: 6 # Number of bad tests because retest is no longer an option
