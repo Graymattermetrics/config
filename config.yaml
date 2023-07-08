@@ -52,7 +52,7 @@ machine_paced:
     speedup:
         speedup_with_ratio_amount: 150 # Amount to speed up by * (ratio - `machine_paced.speedup.weighting`)
         weighting: 1.25  # Weighting of the ratio in the speedup calculation
-
+    Changing weighting ln 54 to make r value speed up (ln 53) over longer response times, so speedup ratio amount had to be shortened.
 anti_spoofing:
     max_bad_tests_in_session: 6 # Number of bad tests because retest is no longer an option
 
