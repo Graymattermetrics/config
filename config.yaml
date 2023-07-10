@@ -60,9 +60,25 @@ cpi_calculation:
     brd_min: 800  # Theoretical number where cpi should be 100
     brd_max: 2400  # Theoretical number where cpi should be 0
 
+exit_codes:
+    0:
+        status: "success"
+        message: "Test completed successfully"
+    1:
+        status: "failed"
+        message: "No response from the user, timed out"
+    2: 
+        status: "failed"
+        message: "Could not respond correctly"
+    3:
+        status: "failed"
+        message: "Too many blocks"
+    
+
 # Whether to save round data and have the ability for the user to download it - 
 save_round_data: true  # Or to automatically send it to another user
 
 number_of_endmode_rounds: 2  # Number of extra rounds at the end of the test
 
 error: False  # An error variable that is set to True if there is a version error
+
