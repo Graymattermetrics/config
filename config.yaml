@@ -11,10 +11,8 @@ self_paced:
     max_correct_duration: 3000  # Answers under this time are counted
 
 machine_paced:
-    max_count: 8  # ?
     max_start_duration: 2400  # Maximum initital `duration` (ignoring `self_paced_average`)
-    not_there: 0  # ?
-    not_there_disabled: true  # ?
+    initial_speedup_amount: 100  # Amount to speed up by at the start of machine-paced
 
     minimum_response_time: 600  # Theoretical minimum response time
 
@@ -38,7 +36,6 @@ machine_paced:
 
     # The test slows down when the user gets less than `rolling_average.threshold` correct answers 
     incorrect:
-        initial_duration: 100  # Ms slower than `self_paced_average` to start machine_paced
         base_duration: 300  # When slowing down, decrease `duration` by this amount
 
     # The test speeds up when the user gets more than `rolling_average.threshold` correct answers
