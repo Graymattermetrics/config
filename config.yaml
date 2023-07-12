@@ -37,14 +37,18 @@ machine_paced:
         max_block_count: 6  # Maximum number of blocks allowed before the test fails
 
     # The test slows down when the user gets less than `rolling_average.threshold` correct answers 
-    slowdown:
+    incorrect:
         initial_duration: 100  # Ms slower than `self_paced_average` to start machine_paced
         base_duration: 300  # When slowing down, decrease `duration` by this amount
 
     # The test speeds up when the user gets more than `rolling_average.threshold` correct answers
-    speedup:
+    correct:
         speedup_with_ratio_amount: 150 # Amount to speed up by * (ratio - `machine_paced.speedup.weighting`)
         weighting: 1.25  # Weighting of the ratio in the speedup calculation
+        
+        max_speedup_amount: 100  # Maximum speedup amount
+        # Maximum slowdown amount
+        max_slowdown_amount: 100  # This can occur in the case of an answer correct from the previous round
 
 anti_spoofing:
     max_bad_tests_in_session: 6 # Number of bad tests because retest is no longer an option
