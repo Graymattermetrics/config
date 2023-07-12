@@ -19,3 +19,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - `machine_paced.slowdown` has been renamed to `machine_paced.incorrect`
 - `machine_paced.speedup` has been renamed to `machine_paced.correct`
+
+[0.1.0]: https://github.com/graymattermetrics/config/commit/d2fcc9008e072c8cc87fe8131ad19ead879af48a#diff-d8d0422389f03d783e32e627250fe29834bd09c6361640d1ff00661dd6820034
