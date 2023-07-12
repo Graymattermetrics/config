@@ -18,8 +18,8 @@ machine_paced:
 
     rolling_average:
         mean_size: 8  # Take the correct answers of the last `mean_size` rounds
-        # The percentage (70%) of the last `mean_size` answers must be either incorrect or
-        threshold: 0.7  # no response to start the self paced restart rounds 
+        # The percentage of the last `mean_size` answers that must be correct
+        threshold: 0.7  # Otherwise the test enters self paced restart round
 
     blocking:
         no_input_count: 2  # How many rounds with no response to declare a "block"
