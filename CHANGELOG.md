@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Renamed and moved `machine_paced.incorrect.initial_duration` to `machine_paced.initial_speedup_duration`
 
+### Removed
+- Useless `machine_paced.max_count`
+- Useless `machine_paced.not_there`
+- Useless `machine_paced.not_there_disabled`
+
 ## [0.1.0]
 
 ### Added
