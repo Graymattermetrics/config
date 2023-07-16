@@ -32,7 +32,7 @@ machine_paced:
 
         no_response_duration: 6000  # No response time before the test ends
 
-        max_block_count: 7  # Maximum number of blocks allowed before the test fails
+        max_block_count:  8 # Maximum number of blocks allowed before the test fails
 
     # The test slows down when the user gets less than `rolling_average.threshold` correct answers 
     incorrect:
