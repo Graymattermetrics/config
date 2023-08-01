@@ -48,7 +48,7 @@ machine_paced:
         
         max_speedup_amount: 100  # Maximum speedup amount
         # Maximum slowdown amount
-        max_slowdown_amount: 100  # This can occur in the case of an answer correct from the previous round
+        max_slowdown_amount: 10  # This can occur in the case of an answer correct from the previous round
 
 anti_spoofing:
     max_bad_tests_in_session: 6 # Number of bad tests because retest is no longer an option
