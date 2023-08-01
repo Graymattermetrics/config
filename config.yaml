@@ -44,7 +44,7 @@ machine_paced:
         #  (`x` * ratio - `y`) * roundDuration
         x: 0.1  # Used in the correct formula
         y: 0.11  # Used in the correct formula
-        weighting: 1.25  # Weighting of the ratio in the speedup calculation
+        
         
         max_speedup_amount: 100  # Maximum speedup amount
         # Maximum slowdown amount
