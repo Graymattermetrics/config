@@ -85,3 +85,4 @@ number_of_endmode_rounds: 2  # Number of extra rounds at the end of the test
 
 error: False  # An error variable that is set to True if there is a version error
 
+display_refresher_screens: True  # Whether or not to display the 6-7 refresher screens
