@@ -1,7 +1,7 @@
 import json
 import yaml
 import requests
-
+from os import environ
 
 def count_keys(data: dict) -> int:
     """
@@ -22,7 +22,8 @@ def get_main_keys() -> dict:
     actual cogspeed algorithm)
     """
     request = requests.get(
-        "https://raw.githubusercontent.com/Graymattermetrics/config/main/config.yaml"
+        "https://raw.githubusercontent.com/Graymattermetrics/config/main/config.yaml",
+        headers={"Authorization": f"bearer {environ['api_key']}"}
     )
     return yaml.safe_load(request.content)
 
@@ -38,12 +39,14 @@ def lambda_handler(event, context):
     if version is None:
         branch = (event["queryStringParameters"] or {}).get("branch", "main")
         request = requests.get(
-            f"https://api.github.com/repos/graymattermetrics/config/branches/{branch}"
+            f"https://api.github.com/repos/graymattermetrics/config/branches/{branch}",
+            headers={"Authorization": f"bearer {environ['api_key']}"}
         )
         version = request.json()["commit"]["sha"]
 
     request = requests.get(
-        f"https://raw.githubusercontent.com/graymattermetrics/config/{version}/config.yaml"
+        f"https://raw.githubusercontent.com/graymattermetrics/config/{version}/config.yaml",
+        headers={"Authorization": f"bearer {environ['api_key']}"}
     )
     config = yaml.safe_load(request.content)
     config["version"] = version
