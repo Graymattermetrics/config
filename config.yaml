@@ -2,6 +2,11 @@
 # CPI = Cognitive Performance Index - A score from 0-100
 # BRD = Blocking Round Duration - Average time (in ms) between two blocks
 
+practice:
+    number_of_rounds: 4  # Number of rounds
+    # For the practice round to have been successful, the BRD
+    success_brd_less_than: 3000  # must be less than this value
+
 self_paced:
     no_response_duration: 6000  # No response time before the test ends
     number_of_training_rounds: 1  # Number of rounds at the start to get the user used to the test
@@ -45,7 +50,6 @@ machine_paced:
         x: 0.1  # Used in the correct formula
         y: 0.14 # Used in the correct formula
         
-        
         max_speedup_amount: 100  # Maximum speedup amount
         # Maximum slowdown amount
         max_slowdown_amount: 10  # This can occur in the case of an answer correct from the previous round
@@ -55,7 +59,7 @@ anti_spoofing:
 
 timeouts:
     max_initial_no_response: 45_000  # Initial starting time before the test ends if no response is given
-    max_test_duration: 180_000  # Maximum time in milliseconds before the test ends
+    max_test_duration: 180_000  # Maximum time before the test ends
     
 cpi_calculation:
     cpi_min: 0  # Lower bound
