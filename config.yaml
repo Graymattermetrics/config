@@ -1,11 +1,15 @@
 # All units in milliseconds unless otherwise specified
 # CPI = Cognitive Performance Index - A score from 0-100
 # BRD = Blocking Round Duration - Average time (in ms) between two blocks
+# ART = Average Response Time - Average response time of n answers
 
 practice:
-    number_of_rounds: 4  # Number of rounds
-    # For the practice round to have been successful, the BRD
-    success_brd_less_than: 3000  # must be less than this value
+    number_of_rounds: 4  # Number of rounds used for judging users capibilities
+    # For the practice round to have been successful, the ART
+    success_art_less_than: 3000  # must be less than this value
+
+    # Now in practice mode;
+    no_response_duration: 30_000  # No response time before the test ends
 
 self_paced:
     no_response_duration: 6000  # No response time before the test ends
