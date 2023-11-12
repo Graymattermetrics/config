@@ -3,21 +3,14 @@
 # BRD = Blocking Round Duration - Average time (in ms) between two blocks
 # ART = Average Response Time - Average response time of n answers
 
-practice:
-    number_of_rounds: 4  # Number of rounds used for judging users capibilities
-    # For the practice round to have been successful, the ART
-    success_art_less_than: 3000  # must be less than this value
-
-    # Now in practice mode;
-    no_response_duration: 30_000  # No response time before the test ends
-
 self_paced:
-    no_response_duration: 6000  # No response time before the test ends
+    no_response_duration: 3000  # No response time before the answer is displayed as incorrect
     number_of_training_rounds: 1  # Number of rounds at the start to get the user used to the test
-    max_wrong_count: 5  # Number of wrong answers before the test ends
-    max_right_count: 4  # Number of right answers *in a row* before machine paced starts
-    total_correct_count: 12  # Number of correct answers under `max_correct_duration` to end the test
-    max_correct_duration: 3000  # Answers under this time are counted
+    
+    max_right_count: 6  # Number of right answers *in a row* before machine paced starts
+    right_count_art_less_than: 2600  # The correct count must have an art under 2600ms
+    
+    total_answer_count: 20  # Number of answers under `max_correct_duration` to end the test
 
 machine_paced:
     max_start_duration: 2400  # Maximum initital `duration` (ignoring `self_paced_average`)
