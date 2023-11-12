@@ -77,6 +77,9 @@ exit_codes:
     3:
         status: "failed"
         message: "Too many blocks"
+    4:
+        status: "failed"
+        message: "Does not know test well enough to continue"
     
 
 # Whether to save round data and have the ability for the user to download it - 
