@@ -13,7 +13,7 @@ self_paced:
     total_answer_count: 20  # Number of answers under `max_correct_duration` to end the test
 
 machine_paced:
-    max_start_duration: 2400  # Maximum initital `duration` (ignoring `self_paced_average`)
+    max_start_duration: 2600  # Maximum initital `duration` (ignoring `self_paced_average`)
     initial_speedup_amount: 100  # Amount to speed up by at the start of machine-paced
 
     minimum_response_time: 600  # Theoretical minimum response time
