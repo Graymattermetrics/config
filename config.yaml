@@ -47,7 +47,7 @@ machine_paced:
         x: 0.1  # Used in the correct formula
         y: 0.14 # Used in the correct formula
         
-        max_speedup_amount: 100  # Maximum speedup amount
+        max_speedup_amount: 200  # Maximum speedup amount
         # Maximum slowdown amount
         max_slowdown_amount: 10  # This can occur in the case of an answer correct from the previous round
 
