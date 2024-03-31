@@ -3,17 +3,25 @@
 # BRD = Blocking Round Duration - Average time (in ms) between two blocks
 # ART = Average Response Time - Average response time of n answers
 
+
+practice_mode:
+    no_response_duration: 8000
+    max_right_count: 4
+    right_count_art_less_than: 3000  # The correct count must have an art under 2600ms
+
+    total_answer_count: 20  # Number of answers (unsuccessful) under `max_correct_duration` to end the test in practice-test mode
+
 self_paced:
-    no_response_duration: 3000  # No response time before the answer is displayed as incorrect
+    no_response_duration: 4000  # No response time before the answer is displayed as incorrect
     number_of_training_rounds: 1  # Number of rounds at the start to get the user used to the test
     
-    max_right_count: 6  # Number of right answers *in a row* before machine paced starts
+    max_right_count: 4  # Number of right answers *in a row* before machine paced starts
     right_count_art_less_than: 2600  # The correct count must have an art under 2600ms
     
-    total_answer_count: 20  # Number of answers under `max_correct_duration` to end the test
+    total_answer_count: 20  # Number of answers (unsuccessful) under `max_correct_duration` to end the test in self-paced mode
 
 machine_paced:
-    max_start_duration: 2600  # Maximum initital `duration` (ignoring `self_paced_average`)
+    max_start_duration: 2600  # Maximum initial `duration` (ignoring `self_paced_average`)
     initial_speedup_amount: 100  # Amount to speed up by at the start of machine-paced
 
     minimum_response_time: 600  # Theoretical minimum response time
