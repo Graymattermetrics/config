@@ -16,6 +16,7 @@ self_paced:
     number_of_training_rounds: 1  # Number of rounds at the start to get the user used to the test
     
     max_right_count: 4  # Number of right answers *in a row* before machine paced starts
+    max_wrong_count: 5  # Number of wrong answers in a row to end the test
     right_count_art_less_than: 2600  # The correct count must have an art under 2600ms
     
     total_answer_count: 20  # Number of answers (unsuccessful) under `max_correct_duration` to end the test in self-paced mode
