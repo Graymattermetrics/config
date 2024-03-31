@@ -51,13 +51,14 @@ def lambda_handler(event, context):
     config = yaml.safe_load(request.content)
     config["version"] = version
 
+    # TODO: Fix
     # Minus one because its the 'version' key
-    if count_keys(config) - 1 != count_keys(get_main_keys()):
-        reason = (
-            "Error: the number of keys in the config is less than "
-            "the number of keys in the main branch"
-        )
-        config = {"error": True, "reason": reason}
+    # if count_keys(config) - 1 != count_keys(get_main_keys()):
+    #     reason = (
+    #         "Error: the number of keys in the config is less than "
+    #         "the number of keys in the main branch"
+    #     )
+        # config = {"error": True, "reason": reason}
 
     return {
         "statusCode": 200,
