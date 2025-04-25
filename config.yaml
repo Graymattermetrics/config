@@ -70,7 +70,7 @@ timeouts:
 cpi_calculation:
     cpi_min: 0  # Lower bound
     cpi_max: 100  # Upper bound
-    brd_min: 700  # Theoretical number where cpi should be 100
+    brd_min: 600  # Theoretical number where cpi should be 100
     brd_max: 1800  # Theoretical number where cpi should be 0
 
 exit_codes:
