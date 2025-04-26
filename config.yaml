@@ -25,7 +25,7 @@ machine_paced:
     max_start_duration: 2600  # Maximum initial `duration` (ignoring `self_paced_average`)
     initial_speedup_amount: 100  # Amount to speed up by at the start of machine-paced
 
-    minimum_response_time: 800  # Theoretical minimum response time
+    minimum_response_time: 700  # Theoretical minimum response time
 
     rolling_average:
         mean_size: 8  # Take the correct answers of the last `mean_size` rounds
