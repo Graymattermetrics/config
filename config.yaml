@@ -36,7 +36,7 @@ machine_paced:
         no_input_count: 2  # How many rounds with no response to declare a "block"
 
         slow_down_duration: 800  # After blocking, resume with `machine_pace` + this amount
-        duration_delta: 200  # For the test to end, two blocks must occur within this range
+        duration_delta: 201  # For the test to end, two blocks must occur within this range
 
         min_correct_answers: 2  # Number of correct answers in a row needed to continue with MP
         max_wrong_answers: 3  # Number of total wrong answers before the test ends
