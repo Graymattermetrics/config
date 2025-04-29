@@ -13,7 +13,7 @@ practice_mode:
 
 self_paced:
     no_response_duration: 3000  # No response time before the answer is displayed as incorrect
-    number_of_training_rounds: 30  # Number of rounds at the start to get the user used to the test
+    number_of_training_rounds: 1  # Number of rounds at the start to get the user used to the test
     
     max_right_count: 7  # Number of right answers *in a row* before machine paced starts
     max_wrong_count: 5  # Number of wrong answers in a row to end the test
