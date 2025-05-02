@@ -23,7 +23,7 @@ self_paced:
 
 machine_paced:
     max_start_duration: 2600  # Maximum initial `duration` (ignoring `self_paced_average`)
-    initial_speedup_amount: 100  # Amount to speed up by at the start of machine-paced
+    initial_speedup_amount: -600  # Amount to speed up by at the start of machine-paced
 
     minimum_response_time: 700  # Theoretical minimum response time
 
