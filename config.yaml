@@ -99,3 +99,9 @@ number_of_endmode_rounds: 2  # Number of extra rounds at the end of the test
 error: False  # An error variable that is set to True if there is a version error
 
 display_refresher_screens: true  # Whether or not to display the 6-7 refresher screens
+
+
+# The number that the dots shown goes up to
+# For example, if this value is set at 6, then only the dots from 1-6 are shown
+# Instead of the dots from 1-9
+number_of_dots_upper: 9
