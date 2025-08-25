@@ -5,7 +5,8 @@
 
 
 practice_mode:
-    no_response_duration: 8000
+    no_response_duration: 20000
+
     max_right_count: 5
     right_count_art_less_than: 2600  # The correct count must have an art under 2600ms
     minimum_rounds: 20  # Minimum number of rounds to extend test duration
